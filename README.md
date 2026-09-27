@@ -182,14 +182,26 @@ The architecture successfully achieved high availability and self-healing confir
 
 
 
-## Errors Encountered During This Setup and How I Solved Them
+## Issues I Encountered During This Setup and How I Resolved Them
 
-
-- **At the first test, the browser returned a 'This site can't be reached' response:**
+- **At the first test, the browser returned a 'This site can't be reached' response**
 
 <img width="950" height="473" alt="image" src="https://github.com/user-attachments/assets/40c0badd-09c9-4522-9759-14a56d6d691a" />
 
-**Steps Taken to Fix the Issue:**
+**Steps I took to Resolve this Issue**
+
+- EC2 instances not receiving traffic: The EC2 security group had not been attached to the launch template, so instances launched without the correct inbound rule allowing traffic from the ALB. I corrected this by attaching the EC2 security group to the launch template
+
+- Existing instances still not receiving traffic after the fix; Attaching the security group created version 2 of the launch template, but the ASG default version was still set to version 1, and the already running instances had launched under the old configuration. I updated the ASG default version to version 2 and terminated existing instances, allowing the ASG to relaunch them using the corrected configuration
+
+- Target group showing no healthy targets: the running EC2 instances had not been registered as targets in the target group, I corrected this by manually selecting the running instances and registering them as targets
+
+- After the above steps, I tested the ALB DNS name using curl from the CLI and confirmed that the web server was responding correctly. This help verifies that the issue was not with  the web server configuration. The issue was I did not prefix the ALB DNS name with http:// in the browser, since the ALB listener was configured for HTTP on port 80 only. I accessed the ALB using http:// in the browser which resolves the issue
+
+
+<img width="857" height="318" alt="image" src="https://github.com/user-attachments/assets/56be5e84-10e8-4bf6-a704-e6dff08aadea" />
+
+
 
 
 
