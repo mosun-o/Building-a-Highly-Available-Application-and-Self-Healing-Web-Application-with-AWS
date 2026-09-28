@@ -186,19 +186,33 @@ This project demonstrates a highly available and self-healing web application us
 
 - **Configure the desired capacity for the ASG**
 
-<img width="946" height="383" alt="image" src="https://github.com/user-attachments/assets/34cc04fe-1b7e-4086-baa8-d74b8fe89c51" />
+<img width="1600" height="686" alt="WhatsApp Image 2026-09-28 at 23 53 43" src="https://github.com/user-attachments/assets/ffdef16e-bffc-480c-9927-cea85f37d4b9" />
+
 
 - **Review the configurations and create the ASG**
 
-<img width="953" height="377" alt="image" src="https://github.com/user-attachments/assets/1db339b4-86c2-4794-8ae3-ff7a763864a0" />
 
-<img width="952" height="373" alt="image" src="https://github.com/user-attachments/assets/e6debb41-844f-4645-9d4e-5325ac5c0e85" />
+<img width="1600" height="689" alt="WhatsApp Image 2026-09-28 at 23 55 20" src="https://github.com/user-attachments/assets/8e5dd913-e84b-44c0-add8-261f8c5706d0" />
 
-<img width="950" height="370" alt="image" src="https://github.com/user-attachments/assets/4b0c0a73-e7b6-48ba-9405-6b680b3a9a9e" />
 
-<img width="954" height="370" alt="image" src="https://github.com/user-attachments/assets/d6685f0c-62c2-4f58-b97d-8f7cb867f18e" />
 
-<img width="951" height="380" alt="image" src="https://github.com/user-attachments/assets/be083328-74ef-44f5-a877-c0234b23b0f1" />
+<img width="1600" height="692" alt="WhatsApp Image 2026-09-28 at 23 56 18" src="https://github.com/user-attachments/assets/4e8bf2f2-008a-450e-b565-8eeafe70f037" />
+
+
+
+<img width="1600" height="689" alt="WhatsApp Image 2026-09-28 at 23 57 32" src="https://github.com/user-attachments/assets/6434d98a-47fb-439d-abbf-687903bac84f" />
+
+
+
+<img width="1600" height="695" alt="WhatsApp Image 2026-09-28 at 23 58 40" src="https://github.com/user-attachments/assets/3c296407-a0f0-432a-81af-c1b8d42b350e" />
+
+
+
+<img width="1600" height="698" alt="WhatsApp Image 2026-09-28 at 23 59 30" src="https://github.com/user-attachments/assets/ee8d83df-5108-4a37-b181-96e07d993086" />
+
+
+
+
 
 - **Register targets for the ASG**
 
