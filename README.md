@@ -47,15 +47,25 @@ This project demonstrates a highly available and self-healing web application us
 - ## Step 1: Create a Launch Template for ASG with User Data Script
   - A launch template defines the configuration for the EC2 instances, which includes AMI, instance type, security groups, and user data script. ASG uses it to automatically launch new EC2 instances with the same configuration when scaling or replacing instances.
 
-<img width="619" height="349" alt="image" src="https://github.com/user-attachments/assets/2ed3361a-e084-4549-bd58-e657e5f60571" />
 
-<img width="638" height="347" alt="image" src="https://github.com/user-attachments/assets/672cceb5-5c09-44a7-b04e-a4379aac0b01" />
-<img width="620" height="239" alt="image" src="https://github.com/user-attachments/assets/ded582e6-2f50-4b0d-95af-024ae289ce1a" />
-
-<img width="949" height="369" alt="image" src="https://github.com/user-attachments/assets/ab7c7098-e1bd-4172-a47d-8b7d253b6f64" />
+<img width="1600" height="698" alt="WhatsApp Image 2026-09-28 at 23 07 40" src="https://github.com/user-attachments/assets/11ad1dc0-e6f0-478e-96c7-94566a4b0941" />
 
 
-<img width="935" height="92" alt="image" src="https://github.com/user-attachments/assets/970ed563-223c-4041-9f3e-0c90da6f4c89" />
+<img width="1600" height="689" alt="WhatsApp Image 2026-09-28 at 23 10 11" src="https://github.com/user-attachments/assets/542f9c0f-9b8b-4ece-ba18-b235ab8f2557" />
+
+
+<img width="1600" height="690" alt="WhatsApp Image 2026-09-28 at 23 11 47" src="https://github.com/user-attachments/assets/23763067-1912-4ffc-b7e0-7aceac04a89c" />
+
+
+
+
+<img width="1600" height="692" alt="WhatsApp Image 2026-09-28 at 23 13 08" src="https://github.com/user-attachments/assets/65d76ed5-0a98-453a-8d87-1d6be3ce8889" />
+
+
+
+<img width="1600" height="680" alt="WhatsApp Image 2026-09-28 at 23 14 43" src="https://github.com/user-attachments/assets/a99bf69b-6d73-4d8b-9d48-46608f537b46" />
+
+
 
 - ## Step 2: Configure Security Groups
   - Create a security group for the ALB to allow inbound HTTP traffic from the internet. Also, create a separate security group for the EC2 instances that allows inbound traffic only from ALB security group ID. This ensures the instances are not directly accessible from the public internet
