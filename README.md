@@ -161,15 +161,28 @@ This project demonstrates a highly available and self-healing web application us
 ## Step 4: Configure Auto Scaling Group
  - Create the Auto Scaling Group using the launch template created in Step 1, selecting version 2 (in this case) of the launch template
 
-<img width="955" height="341" alt="image" src="https://github.com/user-attachments/assets/cfef4e5f-bcbe-4c3b-9d0e-d5678708828f" />
 
-<img width="958" height="377" alt="image" src="https://github.com/user-attachments/assets/3d707d98-2912-4582-a1d0-66f23b3c5ad5" />
+
+<img width="1600" height="687" alt="WhatsApp Image 2026-09-28 at 23 43 36" src="https://github.com/user-attachments/assets/b0ecc1b3-2945-47a6-ae33-697ac66fab2c" />
+
+
+
+<img width="1600" height="691" alt="WhatsApp Image 2026-09-28 at 23 46 06" src="https://github.com/user-attachments/assets/983a703c-05ac-485c-8a04-06b794445d5a" />
+
+
+
 
 - **Attach the ASG to the ALB TG and enable ELB health checks**
 
-<img width="949" height="382" alt="image" src="https://github.com/user-attachments/assets/30f3a719-3f4e-4f9d-9237-43847c4fc0c0" />
+<img width="1600" height="680" alt="WhatsApp Image 2026-09-28 at 23 47 13" src="https://github.com/user-attachments/assets/02b6d173-c45e-42d3-a07c-7eea619b0824" />
 
-<img width="950" height="364" alt="image" src="https://github.com/user-attachments/assets/bbf1e1d0-5033-4cff-a1da-62b1a64f65ba" />
+
+
+<img width="1600" height="692" alt="WhatsApp Image 2026-09-28 at 23 48 23" src="https://github.com/user-attachments/assets/3916ceeb-84c2-4d69-a7f3-351b6711a1c7" />
+
+
+
+
 
 - **Configure the desired capacity for the ASG**
 
