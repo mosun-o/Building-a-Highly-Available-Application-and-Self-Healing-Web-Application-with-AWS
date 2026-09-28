@@ -186,6 +186,8 @@ This project demonstrates a highly available and self-healing web application us
 
 - **Configure the desired capacity for the ASG**
 
+
+
 <img width="1600" height="686" alt="WhatsApp Image 2026-09-28 at 23 53 43" src="https://github.com/user-attachments/assets/ffdef16e-bffc-480c-9927-cea85f37d4b9" />
 
 
@@ -216,39 +218,84 @@ This project demonstrates a highly available and self-healing web application us
 
 - **Register targets for the ASG**
 
-<img width="952" height="380" alt="image" src="https://github.com/user-attachments/assets/95a9bb52-f3c6-414c-bdb9-e72fc58b5ebc" />
 
-<img width="952" height="371" alt="image" src="https://github.com/user-attachments/assets/49601fb1-3477-4b0b-8adc-cf734e56bafd" />
+<img width="1600" height="692" alt="WhatsApp Image 2026-09-29 at 00 00 56" src="https://github.com/user-attachments/assets/15ab4472-2eb0-49f7-94d2-f203cb3b8237" />
+
+
+<img width="1600" height="689" alt="WhatsApp Image 2026-09-29 at 00 02 29" src="https://github.com/user-attachments/assets/3288178c-be55-4d87-96fd-89e278574bd1" />
+
+
+
 
 
 ## Verification and Testing: 
 
 - Copy the ALB DNS name from the ALB page and paste it into a new incognito browser tab, prefixed with http://
 
-<img width="941" height="113" alt="image" src="https://github.com/user-attachments/assets/d16bfbb5-7802-48b3-ab0d-b14e9cf96e92" />
+
+
+<img width="1600" height="681" alt="WhatsApp Image 2026-09-29 at 00 03 46" src="https://github.com/user-attachments/assets/13a6418b-48e8-4fbb-a4f8-59fb019b9ed7" />
+
+
+
 
 - **After a refresh; traffic is served from a different instance ID and AZ**
 
-<img width="955" height="170" alt="image" src="https://github.com/user-attachments/assets/018d3dfd-2641-4e07-8f79-1e2ab0984454" />
 
-- **Manually terminate one running instance to simulate a failure** 
 
-<img width="953" height="374" alt="image" src="https://github.com/user-attachments/assets/27ca2c92-fd8f-4835-a371-9acf914ac3a6" />
+<img width="1600" height="695" alt="WhatsApp Image 2026-09-29 at 00 04 56" src="https://github.com/user-attachments/assets/83ad9b78-4232-4e26-a5f4-dd0190a0404c" />
+
+
+
+
+
+- **Manually terminate one running instance to simulate a failure**
+
+
+
+
+<img width="1600" height="698" alt="WhatsApp Image 2026-09-29 at 00 06 57" src="https://github.com/user-attachments/assets/db605225-03cf-4ea8-9f36-664949193135" />
+
+
+
+
 
 - After manually terminating an instance, the ASG launches a replacement to restore the number of running instances to the configured desired capacity (in this case, set to 2). The minimum setting defines the lowest the ASG is allowed to scale down to, while desired capacity is the actual target the ASG continuously maintains
 
 
-<img width="959" height="370" alt="image" src="https://github.com/user-attachments/assets/ea9246a9-504d-488e-95b7-4083e5d6b13c" />
+<img width="1600" height="677" alt="WhatsApp Image 2026-09-29 at 00 08 09" src="https://github.com/user-attachments/assets/3f8c4ea1-1fc5-4865-8e89-42464381de58" />
 
-<img width="958" height="353" alt="image" src="https://github.com/user-attachments/assets/c4d94f2e-3bfc-42e4-956d-d7f4a2ecfec5" />
+
+
+
+<img width="1600" height="703" alt="WhatsApp Image 2026-09-29 at 00 09 15" src="https://github.com/user-attachments/assets/13522fdd-5aa5-4a3b-9fee-b41b00337047" />
+
+
+
+
+
+
 
 - **After another refresh of the server page, traffic is served by a different instance ID located in us-east-1a**
 
-<img width="892" height="127" alt="image" src="https://github.com/user-attachments/assets/275fa8f3-5d26-4fba-bef6-35ee3397d040" />
+
+
+
+<img width="1600" height="675" alt="WhatsApp Image 2026-09-29 at 00 10 33" src="https://github.com/user-attachments/assets/f2e9fea6-f848-4f47-8f79-ac4139480018" />
+
+
+
+
 
 The instance ID in **us-east-1b** remains the same
 
-<img width="953" height="227" alt="image" src="https://github.com/user-attachments/assets/ab3adf7e-236d-48c7-89ca-77ed7d6475dd" />
+
+
+<img width="1600" height="692" alt="WhatsApp Image 2026-09-29 at 00 11 47" src="https://github.com/user-attachments/assets/5b3ea2ef-2c87-4c2c-b357-b1c67cd74776" />
+
+
+
+
 
   - **Result**:
  
@@ -269,7 +316,15 @@ The architecture successfully achieved high availability and self-healing confir
 
 - **At the first test, the browser returned a 'This site can't be reached' response**
 
-<img width="950" height="473" alt="image" src="https://github.com/user-attachments/assets/40c0badd-09c9-4522-9759-14a56d6d691a" />
+
+
+
+<img width="1600" height="694" alt="WhatsApp Image 2026-09-29 at 00 12 54" src="https://github.com/user-attachments/assets/7305c972-dd30-4d42-a957-5158e9d9fd1d" />
+
+
+
+
+
 
 **Steps I took to Resolve this Issue**
 
@@ -282,7 +337,7 @@ The architecture successfully achieved high availability and self-healing confir
 - After the above steps, I tested the ALB DNS name using curl from the CLI and confirmed that the web server was responding correctly. This help verifies that the issue was not with  the web server configuration. The issue was I did not prefix the ALB DNS name with http:// in the browser, since the ALB listener was configured for HTTP on port 80 only. I accessed the ALB using http:// in the browser which resolves the issue
 
 
-<img width="857" height="318" alt="image" src="https://github.com/user-attachments/assets/56be5e84-10e8-4bf6-a704-e6dff08aadea" />
+<img width="1600" height="695" alt="WhatsApp Image 2026-09-29 at 00 13 52" src="https://github.com/user-attachments/assets/b0905e47-6a37-447c-b310-025746dfca74" />
 
 
 
