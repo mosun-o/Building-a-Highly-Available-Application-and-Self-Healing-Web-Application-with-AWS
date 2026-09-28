@@ -70,13 +70,22 @@ This project demonstrates a highly available and self-healing web application us
 - ## Step 2: Configure Security Groups
   - Create a security group for the ALB to allow inbound HTTP traffic from the internet. Also, create a separate security group for the EC2 instances that allows inbound traffic only from ALB security group ID. This ensures the instances are not directly accessible from the public internet
 
-<img width="957" height="376" alt="image" src="https://github.com/user-attachments/assets/813e7c1a-62cf-4e98-ab2b-3e7a2d29cc30" />
 
-<img width="959" height="365" alt="image" src="https://github.com/user-attachments/assets/eae5cbb7-0cbb-45c5-b7c5-4f2c6a1e1939" />
+<img width="1600" height="679" alt="WhatsApp Image 2026-09-28 at 23 19 43" src="https://github.com/user-attachments/assets/155a2b37-e8c0-4eaa-9cc4-0e6e11d3e9e6" />
 
-<img width="1600" height="606" alt="WhatsApp Image 2026-09-27 at 08 02 59" src="https://github.com/user-attachments/assets/238a0725-fc0b-49d7-a170-50b5c0b65184" />
 
-<img width="956" height="368" alt="image" src="https://github.com/user-attachments/assets/d05ec4ac-17ed-47ac-8735-25f58871405a" />
+<img width="1600" height="694" alt="WhatsApp Image 2026-09-28 at 23 22 15" src="https://github.com/user-attachments/assets/265d619d-4a2c-43f6-bd3d-62a48357d7d9" />
+
+
+
+<img width="1600" height="692" alt="WhatsApp Image 2026-09-28 at 23 23 51" src="https://github.com/user-attachments/assets/2e42a9c7-7247-4a3c-ade3-cfbe215fa319" />
+
+
+
+<img width="1600" height="698" alt="WhatsApp Image 2026-09-28 at 23 25 43" src="https://github.com/user-attachments/assets/b3c37ad0-01ca-4931-bd89-48024c40f5b4" />
+
+
+
 
 **Attach the EC2 Security Group to the Launch Template**
 
