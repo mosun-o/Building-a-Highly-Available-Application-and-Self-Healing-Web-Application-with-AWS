@@ -91,35 +91,72 @@ This project demonstrates a highly available and self-healing web application us
 
  - Attaching the EC2 security group to the launch template creates a new version of the template, to avoid having multiple versions, you can instead create the EC2 security group before creating the launch template and attach it the initial creation of the launch template. This will keep the template at version 1, and if you have version 2, update the launch template to use version 2 as the default version
 
-<img width="956" height="367" alt="image" src="https://github.com/user-attachments/assets/7760db7c-a7c6-4f68-bccd-fc1aef473628" />
+
+
+
+<img width="1600" height="679" alt="WhatsApp Image 2026-09-28 at 23 27 35 (1)" src="https://github.com/user-attachments/assets/0d74349f-5951-49c3-931e-d5ec2f17c094" />
+
+
+
 
 
 ## Step 3: Deploy Target Group and Application Load Balancer
 
 - Create a target group for the ALB and configure health checks. The target group contains the EC2 instances that receives traffic from the ALB, while the ALB uses the health checks to route traffic only to healthy instances
 
-<img width="959" height="373" alt="image" src="https://github.com/user-attachments/assets/d1dedb99-e347-4f7a-acb1-91ee3a8f9b90" />
 
-<img width="957" height="370" alt="image" src="https://github.com/user-attachments/assets/10206cbc-5993-4980-9c28-7110e8c92999" />
 
-<img width="957" height="370" alt="image" src="https://github.com/user-attachments/assets/1e493c66-1074-46f3-852c-33f627295192" />
+<img width="1600" height="686" alt="WhatsApp Image 2026-09-28 at 23 30 47" src="https://github.com/user-attachments/assets/3a6cb55f-0acc-400c-9dea-7438ce713e7a" />
 
-<img width="959" height="376" alt="image" src="https://github.com/user-attachments/assets/67ba0229-d616-422c-9d8b-e0e803769535" />
+
+
+<img width="1600" height="680" alt="WhatsApp Image 2026-09-28 at 23 32 06" src="https://github.com/user-attachments/assets/9c6df292-ca25-4e90-b8de-2b393d615982" />
+
+
+
+<img width="1600" height="689" alt="WhatsApp Image 2026-09-28 at 23 33 17" src="https://github.com/user-attachments/assets/6e22eb5d-5e44-4625-879d-23e668065ad0" />
+
+
+
+<img width="1600" height="690" alt="WhatsApp Image 2026-09-28 at 23 34 20" src="https://github.com/user-attachments/assets/db0e6228-c512-468c-947e-fe6a70558a28" />
+
+
+
 
 
 - **Provision the ALB across 2 Availability Zones, using a public subnet in each AZ, for high availability**
 
-<img width="950" height="371" alt="image" src="https://github.com/user-attachments/assets/73f6d7e4-ac20-4e8e-8b4f-601a55f70640" />
 
-<img width="944" height="368" alt="image" src="https://github.com/user-attachments/assets/a62af582-7d29-41c9-ba34-4582a2767309" />
+
+
+<img width="1600" height="699" alt="WhatsApp Image 2026-09-28 at 23 35 37" src="https://github.com/user-attachments/assets/f36f9e85-617f-405d-93bb-3bb1427dc983" />
+
+
+
+
+<img width="1600" height="680" alt="WhatsApp Image 2026-09-28 at 23 36 50" src="https://github.com/user-attachments/assets/1e047815-9efe-41e5-821c-8a628e8e3817" />
+
+
+
+
 
 - **Attach the previously created ALB security group to the ALB and configure the listener to forward incoming traffic to the target group created earlier**
 
-<img width="953" height="385" alt="image" src="https://github.com/user-attachments/assets/9d3bf8de-8af0-4243-8655-985b2b709ed4" />
 
-<img width="950" height="371" alt="image" src="https://github.com/user-attachments/assets/290184d7-ff55-4c5d-b7e6-8972463f3f50" />
 
-<img width="958" height="383" alt="image" src="https://github.com/user-attachments/assets/0bcb9568-528d-42a6-9b87-c2db143de6bd" />
+<img width="1600" height="691" alt="WhatsApp Image 2026-09-28 at 23 37 48" src="https://github.com/user-attachments/assets/3c0d872f-d041-4645-b74d-e50ed8addf3a" />
+
+
+
+<img width="1600" height="695" alt="WhatsApp Image 2026-09-28 at 23 39 11" src="https://github.com/user-attachments/assets/35227e6b-dbea-499e-82f3-1009cde9206e" />
+
+
+
+<img width="1600" height="691" alt="WhatsApp Image 2026-09-28 at 23 40 15" src="https://github.com/user-attachments/assets/d32475df-f984-42e8-af80-0e3a8637728a" />
+
+
+
+
 
 ## Step 4: Configure Auto Scaling Group
  - Create the Auto Scaling Group using the launch template created in Step 1, selecting version 2 (in this case) of the launch template
